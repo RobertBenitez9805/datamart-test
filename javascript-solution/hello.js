@@ -41,5 +41,43 @@ function findCommonElements(lists) {
     return commonList;
 }
 
-const lists = [[1, 2, 3], [2, 3, 4], [3, 2, 4, 5]];
-console.log("findCommonElements test 1", findCommonElements(lists));
+const lists1 = [[1, 2, 3], [2, 3, 4], [3, 2, 4, 5]];
+const lists2 = [[1, 2, 3, 4, 6], [1, 3, 4], [3, 2, 4, 5, 1]];
+
+
+console.log("findCommonElements test 1", findCommonElements(lists1));
+console.log("findCommonElements test 2", findCommonElements(lists2));
+
+//Problem 6
+function merge(left, right) {
+    const result = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < left.length && j < right.length) {
+        if (left[i] < right[j]) {
+            result.push(left[i]);
+            i++;
+        } else {
+            result.push(right[j]);
+            j++;
+        }
+    }
+
+    return [...result, ...left.slice(i), ...right.slice(j)];
+}
+
+function mergeSort(arr) {
+    if (arr.length <= 1) {
+        return arr;
+    }
+
+    const middle = Math.floor(arr.length / 2);
+    const left = arr.slice(0, middle);
+    const right = arr.slice(middle);
+
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+const arr = [5, 2, 4, 6, 1, 3];
+console.log("mergeSort test 1", mergeSort(arr));
