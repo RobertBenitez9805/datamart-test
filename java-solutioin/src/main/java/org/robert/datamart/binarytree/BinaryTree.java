@@ -38,7 +38,6 @@ public class BinaryTree {
         return search(root, value);
     }
 
-    // Problem 8
     private boolean search(Node node, int value) {
         if (node == null) {
             return false;

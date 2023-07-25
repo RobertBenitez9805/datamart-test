@@ -48,7 +48,10 @@ public class Main {
 
         List<Integer> newList = removeDuplicates(list);
 
-        System.out.println("\nProblem 7 result list: " + newList); // [1, 2, 3, 4]
+        System.out.println("\nProblem 7 result list: " + newList);
+
+        int binariedSearch = binarySearch(p2, 5);
+        System.out.println("\nProblem 8 result: " + binariedSearch);
     }
 
     // Problem 1
@@ -82,4 +85,37 @@ public class Main {
         return new ArrayList<>(set);
     }
 
+    // Problem 8: La funcion retorna el indice del elemento si lo encuentra, si no retorna -1.
+    public static int binarySearch(int[] arr, int x, int left, int right) {
+        if (left > right) {
+            return -1;
+        }
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == x) {
+            return mid;
+        } else if (arr[mid] > x) {
+            return binarySearch(arr, x, left, mid - 1);
+        } else {
+            return binarySearch(arr, x, mid + 1, right);
+        }
+    }
+
+    public static int binarySearch(int[] arr, int x){
+        int left = 0;
+        int right = arr.length - 1;
+
+        if (left > right) {
+            return -1;
+        }
+
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == x) {
+            return mid;
+        } else if (arr[mid] > x) {
+            return binarySearch(arr, x, left, mid - 1);
+        } else {
+            return binarySearch(arr, x, mid + 1, right);
+        }
+    }
+    
 }
