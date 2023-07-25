@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a505ff0b-f220-4382-bfd3-aeb89d1c6d24" name="Changes" comment="First commit!">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/robert/datamart/binarytree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/robert/datamart/binarytree/BinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690295371057</updated>
       <workItem from="1690295371753" duration="4384000" />
-      <workItem from="1690300492802" duration="51000" />
+      <workItem from="1690300492802" duration="255000" />
     </task>
     <task id="LOCAL-00001" summary="First commit!">
       <created>1690295673094</created>
