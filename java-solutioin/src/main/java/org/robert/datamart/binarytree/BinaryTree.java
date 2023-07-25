@@ -1,5 +1,6 @@
 package org.robert.datamart.binarytree;
 
+// Problem 3
 public class BinaryTree {
     private Node root;
 
